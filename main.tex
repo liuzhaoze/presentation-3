@@ -1,0 +1,240 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[UTF8,heading,fontset=none]{ctex} % 中文支持
+\usepackage{ncepu-beamer} % 应用主题
+
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{tikz}        % 绘图
+\usepackage{minted}      % 代码高亮
+\usepackage{subcaption}  % 创建子图
+\usepackage{algorithm2e} % 伪代码
+
+% --------------- 字体设置 --------------- %
+%% 配置方式见 README.md
+%% 如果不想使用自定义字体，可以注释掉下面的设置
+%% 并且删除 ctex 包的 `fontset=none` 选项
+\usepackage{fontspec}
+\setmainfont{HarmonyOS Sans}
+\setsansfont{HarmonyOS Sans}
+\setmonofont{CodeNewRoman Nerd Font}
+\setCJKmainfont{HarmonyOS Sans SC}
+\setCJKsansfont{HarmonyOS Sans SC}
+\setCJKmonofont{HarmonyOS Sans SC}
+% --------------- 字体设置 --------------- %
+
+% --------------- svg 设置 --------------- %
+\usepackage[notransparent]{svg} % 插入 svg 矢量图
+\setsvg{
+  %% 设置 inkscape 路径（inkscape 用于处理 svg 矢量图）
+  % inkscapeexe={"C:/Program Files/Inkscape/bin/inkscape.com"}, % Windows
+  inkscapeexe={"/usr/bin/inkscape"}, % Linux
+  %% 设置 svg 文字随图片缩放
+  inkscapelatex=false
+}
+%% NOTE: draw.io 中的文本需要关闭自动换行和格式化文本
+% --------------- svg 设置 --------------- %
+
+% 输入信息
+\title{Heterogeneity-Aware Proactive Elastic Resource Allocation for Serverless Applications}
+\subtitle{基于异构性感知的无服务器应用主动弹性资源分配}
+\author{刘肇泽}
+\institute{Distributed System Group, NCEPU}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}[noframenumbering]
+
+  \titlepage
+
+\end{frame}
+
+\begin{frame}{目录}
+
+  \centering
+  \begin{minipage}{0.5\textwidth}
+    \tableofcontents
+  \end{minipage}
+
+\end{frame}
+
+% 从这里开始你的创作
+
+% -------------------------------------------------------- %
+\section{无服务计算背景}
+% -------------------------------------------------------- %
+
+\begin{frame}{无服务器计算背景}{概述}
+  无服务器计算 (Serverless Computing)，也称为函数即服务 (Function as a Service, FaaS)，是一种新型云计算模型。用户仅需将函数代码上传至云端，就可以直接发送请求触发函数执行，其底层的运行环境和计算资源由云服务提供商管理。
+\end{frame}
+
+\begin{frame}{无服务器计算背景}{云函数部署示例}
+  腾讯云云函数 (Serverless Cloud Function, SCF) 部署示例：
+  \begin{columns}
+    \column{0.5\textwidth}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{img/serverless-background/scf-deploy-1.png}
+    \end{figure}
+
+    \column{0.5\textwidth}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{img/serverless-background/scf-deploy-2.png}
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{无服务器计算背景}{函数调用示例}
+  创建函数 URL：
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.45\textheight]{img/serverless-background/scf-invoke-1.png}
+  \end{figure}
+  直接通过访问 URL 触发函数执行：
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.15\textheight]{img/serverless-background/scf-invoke-2.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{无服务器计算背景}{大量模板}
+  \begin{figure}
+    \begin{subfigure}{0.45\textwidth}
+      \centering
+      \includegraphics[height=0.7\textheight]{img/serverless-background/scf-template-1.png}
+      \caption{视频转码}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+      \centering
+      \includegraphics[height=0.7\textheight]{img/serverless-background/scf-template-2.png}
+      \caption{解压缩压缩包}
+    \end{subfigure}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{无服务器计算背景}{大量模板}
+  \begin{figure}
+    \begin{subfigure}{0.45\textwidth}
+      \centering
+      \includegraphics[height=0.7\textheight]{img/serverless-background/scf-template-3.png}
+      \caption{图像压缩}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+      \centering
+      \includegraphics[height=0.7\textheight]{img/serverless-background/scf-template-4.png}
+      \caption{日志分析与存储}
+    \end{subfigure}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{无服务器计算背景}{无服务器应用}
+  无服务器应用 (Serverless Application) 是由多个云函数组成的应用程序：
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.75\textheight]{img/serverless-background/serverless-applications.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{无服务器计算背景}{无服务器应用示例}
+  以“直播房间实时语音识别服务\footnote{\url{https://cloud.tencent.com/document/product/1154/65812}}”为例，其架构原理如图所示：
+  \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{img/serverless-background/serverless-app-arch-1.pdf}
+  \end{figure}
+
+  \pause
+
+  \begin{columns}
+    \column{0.45\textwidth}
+    可以抽象为三个云函数先后调用：
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{img/serverless-background/serverless-app-arch-2.pdf}
+    \end{figure}
+
+    \pause
+
+    \column{0.45\textwidth}
+    扩展到更一般的情况，一个无服务器应用可以抽象为一个工作流 $WF$：
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{img/serverless-background/serverless-app-arch-3.pdf}
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+% -------------------------------------------------------- %
+\section{无服务器计算系统结构}
+% -------------------------------------------------------- %
+
+\begin{frame}{无服务器计算系统结构}
+  \begin{columns}
+    \column{0.5\textwidth}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{img/serverless-system-architecture/system-model.pdf}
+    \end{figure}
+
+    \column{0.475\textwidth}
+    运行无服务器应用的系统分为三层：
+    \begin{itemize}
+      \item Application Layer: 当无服务器应用被触发时，工作负载中会创建对应的工作流 $WF_p$
+      \item Instance Layer: 工作流中的函数被逐一分配到 runtime 匹配的容器 $c$ 中
+      \item Server Layer: 将容器分配到合适的物理机节点 $nn$ 上执行函数
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{无服务器计算系统结构}{Application Layer}
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.6\textheight]{img/serverless-system-architecture/system-model-application.pdf}
+  \end{figure}
+
+  本文研究的是非抢占式函数在\textbf{批处理}分配模式下的工作流应用资源分配问题。
+
+  解决在 $T$ 时间段内由 $i$ 个用户提交的总计 $l$ 个工作流的资源分配问题。
+\end{frame}
+
+\begin{frame}{无服务器计算系统结构}{Instance Layer}
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.5\textheight]{img/serverless-system-architecture/system-model-instance.pdf}
+  \end{figure}
+
+  工作流中的每一个函数都会被分配到一个 runtime 匹配的容器中执行。运行不同语言的函数所需要的容器镜像各不相同\footnote{\url{https://hub.docker.com/search?q=openwhisk\%2Faction}}。当函数被调用时，创建容器；当函数执行完毕时释放容器。
+
+  运行函数的容器通常被称为函数实例 (Function Instance) 或 Pod (Kubernetes 中的概念)。
+\end{frame}
+
+\begin{frame}{无服务器计算系统结构}{Server Layer}
+  \begin{columns}
+    \column{0.49\textwidth}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{img/serverless-system-architecture/system-model-server.pdf}
+    \end{figure}
+    % TODO: 说明
+    \column{0.02\textwidth}
+    \rule{0.2mm}{0.8\textheight}
+
+    \column{0.49\textwidth}
+    \begin{figure}
+      \centering
+      \includegraphics[height=0.5\textheight]{img/serverless-system-architecture/NUMA-nodes.png}
+    \end{figure}
+    % TODO: 说明
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+
+  \centering
+  \Huge
+  \usefont{OT1}{pzc}{m}{n}
+  Thanks for listening!
+
+\end{frame}
+
+\end{document}
