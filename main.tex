@@ -215,18 +215,91 @@
       \centering
       \includegraphics[width=\textwidth]{img/serverless-system-architecture/system-model-server.pdf}
     \end{figure}
-    % TODO: 说明
+    函数实例 $c$ 被分配到物理机服务器 $s$ 上的某一个非一致性内存访问 (Non-Uniform Memory Access, NUMA) 节点 $nn$ 上执行。
+
     \column{0.02\textwidth}
-    \rule{0.2mm}{0.8\textheight}
+    \rule{0.2mm}{0.825\textheight}
+
+    \pause
 
     \column{0.49\textwidth}
     \begin{figure}
       \centering
       \includegraphics[height=0.5\textheight]{img/serverless-system-architecture/NUMA-nodes.png}
     \end{figure}
-    % TODO: 说明
+    NUMA 架构常见于双路 CPU 服务器主板中，每个 CPU 都有专用的内存。两节点之间通过 QPI (Quick Path Interconnect) 进行数据传输。
   \end{columns}
 \end{frame}
+
+% -------------------------------------------------------- %
+\section{研究现状与主要贡献}
+% -------------------------------------------------------- %
+
+\begin{frame}{研究现状与主要贡献}{Inaccurate and Inefficient Resource Configuration Estimation}
+  \begin{columns}
+    \column{0.45\textwidth}
+    现状：
+    \begin{itemize}
+      \item 使用实验室测试、简单统计、人工经验或穷举法估计资源配置，会因为忽视运行日志而导致在动态、异构场景下供需不匹配。
+      \item 使用历史或现场日志的资源配置估计方法均针对同构服务器或应用，并且假设日志数据充足；然而现场日志收集效率低下，需要等待较长时间。
+    \end{itemize}
+
+    \column{0.45\textwidth}
+    贡献：
+    \begin{itemize}
+      \item 提出一种工作流资源配置估计方法
+      \item 使用随机森林构建多任务专家分类器
+      \item 识别服务器类型和资源容量之间的耦合关系
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{研究现状与主要贡献}{High-Latency Indirect Communication Way between Functions}
+  \begin{columns}
+    \column{0.45\textwidth}
+    现状：
+    \begin{itemize}
+      \item 数据密集型应用对 NUMA 架构中的通信延迟十分敏感，但这个问题常常被忽视
+      \item 现有的考虑函数间通信来优化工作流执行时间的方法，仅使用外部存储作为通信媒介，或者没有考虑其他通信媒介
+    \end{itemize}
+
+    \column{0.45\textwidth}
+    贡献：
+    \begin{itemize}
+      \item 提出了一种时空联合的函数实例分配方法
+      \item 考虑了函数分配的优先级、函数间通信的亲和度以及服务器的 NUMA 架构
+      \item 考虑了三种通信媒介，使用启发式算法完成函数到容器的分配
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{研究现状与主要贡献}{Long Resource Readiness Time Due to Passive Server Scaling}
+  \begin{columns}
+    \column{0.45\textwidth}
+    现状：
+    \begin{itemize}
+      \item 大多数服务器弹性伸缩方法都假设服务器一直处于可用状态，或被动扩展服务器，导致资源准备时间过长
+      \item 使用基于回归的方法 (如：ARIMA和LSTM) 来预测请求到达情况，都使用连续数值，无法捕获特定时间段的突变
+      \item 剧烈波动的请求到达情况容易导致高估或低估的出现
+    \end{itemize}
+
+    \column{0.45\textwidth}
+    贡献：
+    \begin{itemize}
+      \item 提出了一种主动服务器弹性扩展方法
+      \item 使用融合的 GRU (RNN的一种) 模型来预测工作负载模式，包括负载水平、趋势、幅度等特征
+      \item 该方法动态分配注意力权重来指导弹性伸缩决策，从而应对多变的工作负载模式
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% -------------------------------------------------------- %
+\section{问题表述}
+% -------------------------------------------------------- %
+
+% -------------------------------------------------------- %
+\section{方法描述}
+% -------------------------------------------------------- %
 
 \begin{frame}
 
