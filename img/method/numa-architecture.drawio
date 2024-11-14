@@ -1,0 +1,106 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="第 1 页" id="PfcpaKFkW6wH5n-UHql-">
+    <mxGraphModel dx="2474" dy="1596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-14" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=center;verticalAlign=middle;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#f5f5f5;gradientColor=#b3b3b3;gradientDirection=north;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="-20" width="470" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry width="430" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-2" value="CPU Package" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=20;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-3" value="CPU 0" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="20" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-4" value="CPU 1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-5" value="CPU 2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="180" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-6" value="CPU 7" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="340" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-7" value="\(\cdots\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=20;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="260" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fontColor=default;startArrow=classic;startFill=1;" parent="1" source="k2BlTGQgXNoSFTpeEbUB-8" target="k2BlTGQgXNoSFTpeEbUB-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-8" value="L3 Cache" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="20" y="100" width="390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fontColor=default;startArrow=classic;startFill=1;" parent="1" source="k2BlTGQgXNoSFTpeEbUB-10" target="k2BlTGQgXNoSFTpeEbUB-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-10" value="Integrated Memory Controller (IMC)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;align=center;verticalAlign=middle;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#e1d5e7;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="20" y="170" width="390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fontColor=default;startArrow=classic;startFill=1;" parent="1" source="k2BlTGQgXNoSFTpeEbUB-12" target="k2BlTGQgXNoSFTpeEbUB-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-12" value="Memory" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#23445d;align=center;verticalAlign=middle;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#bac8d3;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry y="250" width="430" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-16" value="NUMA Node" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=20;fontColor=default;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-20" y="320" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="k2BlTGQgXNoSFTpeEbUB-31" value="Intel Ultra Path&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Interconnect&lt;/span&gt;&lt;div&gt;or&lt;/div&gt;&lt;div&gt;AMD Infinity Fabric&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82b366;align=center;verticalAlign=middle;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#d5e8d4;gradientColor=#97d077;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="470" y="230" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=center;verticalAlign=middle;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#f5f5f5;gradientColor=#b3b3b3;gradientDirection=north;" parent="1" vertex="1">
+          <mxGeometry x="790" y="-20" width="470" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="810" width="430" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-3" value="CPU Package" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=20;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="810" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-4" value="CPU 0" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="830" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-5" value="CPU 1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="910" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-6" value="CPU 2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="990" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-7" value="CPU 7" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="1150" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-8" value="\(\cdots\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=20;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="1070" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fontColor=default;startArrow=classic;startFill=1;" parent="1" source="tFqcb7oYxs_7QlpbwW7l-10" target="tFqcb7oYxs_7QlpbwW7l-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-10" value="L3 Cache" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="830" y="100" width="390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=HarmonyOS Sans SC;fontSize=20;fontColor=default;startArrow=classic;startFill=1;" parent="1" source="tFqcb7oYxs_7QlpbwW7l-12" target="tFqcb7oYxs_7QlpbwW7l-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-12" value="Integrated Memory Controller (IMC)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;align=center;verticalAlign=middle;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#e1d5e7;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="830" y="170" width="390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-13" value="Memory" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#23445d;align=center;verticalAlign=middle;fontFamily=HarmonyOS Sans SC;fontSize=20;fillColor=#bac8d3;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="810" y="250" width="430" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-14" value="NUMA Node" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=20;fontColor=default;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="790" y="320" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tFqcb7oYxs_7QlpbwW7l-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" parent="1" source="k2BlTGQgXNoSFTpeEbUB-31" target="tFqcb7oYxs_7QlpbwW7l-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hwvJAckft_SSgwmpNBlm-1" value="Local Communication" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="470" y="190" width="300" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

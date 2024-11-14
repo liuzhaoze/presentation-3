@@ -1,0 +1,81 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="第 1 页" id="JzWtN5dbuEj5JDY50xRj">
+    <mxGraphModel dx="691" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="591" pageHeight="276" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1nw9crS-mtlr1G7ThWLO-1" target="1nw9crS-mtlr1G7ThWLO-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;开始&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontFamily=HarmonyOS Sans SC;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="10" y="30" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1nw9crS-mtlr1G7ThWLO-2" target="1nw9crS-mtlr1G7ThWLO-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-2" value="输入&lt;div&gt;资源配置\(R(WF_p)\)&lt;/div&gt;&lt;div&gt;和函数分组结果&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fontFamily=HarmonyOS Sans SC;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="100" y="10" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1nw9crS-mtlr1G7ThWLO-3" target="1nw9crS-mtlr1G7ThWLO-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-3" value="计算执行时间 \(AET\) 和成本 \(AEC\)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontFamily=HarmonyOS Sans SC;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="290" y="20" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1nw9crS-mtlr1G7ThWLO-4" target="1nw9crS-mtlr1G7ThWLO-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-4" value="计算 \(score_{WF_p}\)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontFamily=HarmonyOS Sans SC;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="450" y="20" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1nw9crS-mtlr1G7ThWLO-5" target="1nw9crS-mtlr1G7ThWLO-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-21" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" parent="1nw9crS-mtlr1G7ThWLO-16" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1nw9crS-mtlr1G7ThWLO-5" target="1nw9crS-mtlr1G7ThWLO-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-22" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" parent="1nw9crS-mtlr1G7ThWLO-17" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-5" value="\(score_{WF_p} \geqslant T_{score}\)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontFamily=HarmonyOS Sans SC;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="430" y="110" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1nw9crS-mtlr1G7ThWLO-6" target="1nw9crS-mtlr1G7ThWLO-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-23" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" parent="1nw9crS-mtlr1G7ThWLO-18" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1nw9crS-mtlr1G7ThWLO-6" target="1nw9crS-mtlr1G7ThWLO-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-24" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=0;fontFamily=HarmonyOS Sans SC;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" parent="1nw9crS-mtlr1G7ThWLO-19" vertex="1" connectable="0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-6" value="询问开发者&lt;div&gt;是否取消 \(WF_p\)&lt;/div&gt;&lt;div&gt;的执行&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontFamily=HarmonyOS Sans SC;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="190" y="110" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-7" value="调整资源配置" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontSize=14;fontFamily=HarmonyOS Sans SC;" parent="1" vertex="1">
+          <mxGeometry x="10" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-8" value="执行 \(WF_p\)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontSize=14;fontFamily=HarmonyOS Sans SC;" parent="1" vertex="1">
+          <mxGeometry x="450" y="230" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1nw9crS-mtlr1G7ThWLO-11" value="取消执行 \(WF_p\)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontSize=14;fontFamily=HarmonyOS Sans SC;" parent="1" vertex="1">
+          <mxGeometry x="210" y="230" width="130" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
